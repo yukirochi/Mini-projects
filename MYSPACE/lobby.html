@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySpace</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+TZ+Guides&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lobby.css">
+    <link rel="icon" type="image/png"  href="Logo/logo3.png">
+</head>
+<body>
+    <div class="disk-main">
+    
+       <div class="disk">
+          <div class="border-inside-disk">
+           <div class="border-inside-disk2">
+            <div class="border-inside-disk3">
+              <div class="border-inside-disk4">
+              <div class="disk-line">
+                <div class="disk-line2">
+                   <div class="disk-hole"></div>
+                </div>
+              </div> 
+              </div>
+            </div> 
+            </div>   
+          </div>
+       </div>
+
+        
+    
+    <div class="needle">
+      <div class="div-tip"></div>
+      <div class="div-base"></div>
+    </div>
+      </div>
+      
+    
+    
+    <div class="music-list-main"></div>
+    
+        <div class="logo-div"></div>
+        <div class="user-profile" onclick="userProfileGrow()">
+            <span class="material-icons"> notifications</span>
+            <span class="material-icons" id="chats-logo-notification" onclick="openChatNotification(event); stopit(event)"> chats</span>
+            <div class="profile-picture-div"></div>
+            <div class="user-info-div">
+                <p class="guest-name">GUEST</p>
+                <p>"unknown"</p>
+            </div>
+        </div>
+ 
+
+    <div class="side">
+        <div class="music-main-div" onclick="openMusic()">
+           <div class="music-div"></div>
+           <div class="music-buttons">
+            <span class="material-icons" onclick="stopit(event) ; loopSong()"> repeat</span>
+            <span class="material-icons" onclick="stopit(event) ; backSong()"> skip_previous</span>
+            <span class="material-icons" onclick="stopit(event) ; playpause()" id="playpause"> play_arrow</span>
+            <span class="material-icons" onclick="stopit(event) ; nextSong()" class="next-song"> skip_next</span>
+            <span class="material-icons" onclick="stopit(event) ; shuffleSong()"> shuffle</span>
+           </div>
+           <div class="slider" onclick="stopit(event)">
+                 <input type="range" class="music-slider" id="music1-slider" min="0" max="100" value="0">
+                 <p><span class="ctime">0:00</span><span class="dtime">0:00</span></p>
+                 <input type="range" class="volume-slider" min="0" max="1" value="1" step="0.01">
+                 <p><span class="material-icons">volume_off</span><span class="material-icons">volume_up</span></p>
+           </div>
+        </div>
+        <div class="background-selection-div">
+            <input type="radio" name="background-type"  onclick="background1()">
+            <input type="radio" name="background-type" onclick="background2()" checked>
+            <input type="radio" name="background-type" onclick="background3()">
+        </div>
+    </div>
+    <div class="side-right">
+          <div class="side-right-header">
+            <button class="add-topic">
+                <span class="material-icons">add</span>
+            </button>
+            <button class="hide-side-right">
+                <span class="material-icons" onclick="hidesideright()" id="close-right-side">close</span>
+            </button>
+        </div>
+          <div class="side-right-content">
+            
+            
+          </div>
+    </div>
+
+    <div class="chat-div" onclick="openGlobalChat()"><span class="material-icons">forum</span>
+      <div class="chat-log">
+        <div class="hidden-chat"></div>
+        
+        
+        
+      </div>
+      <div class="chat-inputs">
+        <input type="text" onclick="stopit(event)" class="message"> <button onclick="stopit(event) ; send()" class="send-message" >send</button >
+      </div>
+    </div>
+
+    <div class="music-player2-div">
+      <p class="song-name">......</p>
+      <div class="musicplayer2-inputs"> <input class="music-slider" id="music2-slider" type="range" min="0" max="100" value="0" ></div>
+      <div class="music-buttons2">
+        <span class="material-icons" onclick="stopit(event) ; loopSong()"> repeat</span>
+        <span class="material-icons" onclick="stopit(event) ; backSong()"> skip_previous</span>
+        <span class="material-icons" onclick="stopit(event) ; playpause()" id="playpausee"> play_arrow</span>
+        <span class="material-icons" onclick="stopit(event) ; nextSong()" class="next-song"> skip_next</span>
+        <span class="material-icons" onclick="stopit(event) ; shuffleSong()"> shuffle</span>
+       </div>
+    </div>
+    <script src="lobby.js" type="module"></script>
+</body>
+</html>
