@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Archivo";
+    align-items: center;
+    font-size: 15px;
+    background-color: rgb(0, 0, 0, 1);
+    color: #b46635;
+    font-weight: 700;
+}
+.navigator{
+    width:450px;
+    height: 450px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: -200px;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    box-shadow:  2px 10px 2px rgba(0, 0, 0 , 0.2);
+}
+.icon{
+    background-image: url("/icon/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 350px;
+    height: 300px;
+    border-radius: 100%;
+    margin-bottom:  0;
+    
+    
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    backdrop-filter: blur(5px);
+}
+body{
+    background-color: #b46635;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.content-landing{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25%;
+}
+.inf-landing{
+    width: 500px;
+    height: 550px;
+    font-family: "Archivo";
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.inf-landing > p{
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+.vid-landing{
+    width: 450px;
+    height: 450px;
+    border: 1px solid black;
+}
+.login,.signup{
+    width: 400px;
+    height: 500px;
+    background-color: black;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow:  5px 10px 2px rgba(0, 0, 0 , 0.2);
+}
+.log-logo{
+    background-image: url("/icon/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    margin-bottom:  0;
+}
+label{
+    color: #b46635;
+    font-family: "Archivo";
+    text-transform: capitalize;
+}
+#email-log,
+#c-email-log,
+#password-log{
+    margin-top: -50px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #b46635;
+    color: #b46635;
+    text-align: center;
+}
+.login > button,
+.signup > button{
+    width: 100px;
+    height: 30px;
+    outline: none;
+    background-color: #b46635;
+    font-family: "Archivo";
+    border: 1px solid;
+    text-transform: capitalize;
+    
+}
+.about{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    font-family: "Archivo";
+    font-size: 15px;
+    text-align: center;
+}
+.about > p{
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+.plan-cont{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.plan1,
+.plan2,
+.plan3{
+    width: 350px;
+    height: 425px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#plan1,
+#plan2,
+#plan3{
+    width: 350px;
+    height: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#plan1 > p,
+#plan2 > p,
+#plan3 > p{
+    text-align: center;
+    width: 200px;
+    font-family: "Archivo";
+}
+.pp-feature{
+    text-align: start;
+}
+.p-feature{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    width: 300px;
+}
+.plan-cont  button{
+    font-family: "Archivo";
+    background-color: #000000;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    color: #b46635;
+}
+*{
+    cursor: pointer;
+}
+header > span:hover{
+    opacity: 0.5;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.popup-box h3 {
+  margin-top: 0;
+  font-family: "archivo";
+  color: white;
+}
+
+.popup-box label {
+  display: block;
+  margin-top: 10px;
+ font-family: "archivo";
+  color: white;
+}
+
+.popup-box input, .popup-box select {
+  width: 80%;
+  border: none;
+  border-bottom:  1px solid #b46635;
+  outline: none;
+  font-family: "archivo";
+  color: white;
+  background-color: transparent;
+}
+
+.popup-buttons {
+  margin-top: 15px;
+  text-align: right;
+  font-family: "archivo";
+  color: rgb(0, 0, 0);
+}
+
+.popup-buttons button {
+  margin-left: 10px;
+ color: rgb(0, 0, 0);
+ background-color: #b46635;
+ border: 1px solid black;
+ font-size: 15px;
+ width: 80px;
+ height: 30px;
+ font-family: "archivo";
+}
+option{
+    background-color: #b46635;
+}
+input[type="file"]{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.custom-alert {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.custom-alert.hidden {
+  display: none;
+}
+
+.alert-box {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  max-width: 300px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.alert-box p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.alert-box button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alert-box button:hover {
+  background-color: #0056b3;
+}
+.table-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.purchase-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+}
+
+.purchase-table th,
+.purchase-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.purchase-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.purchase-table tbody tr:hover {
+  background-color: #f0f8ff;
+}
+
+.status {
+  font-weight: bold;
+  padding: 0.4rem 0.7rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.status.waiting {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.verify-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+.verify-btn:hover {
+  opacity: 0.5;
+}
+
+.verified-label {
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.user-plans {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 50px;
+}
+
+.plan-card {
+  width: 320px;            
+  height: 300px;           
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.plan-card h3 {
+  margin-top: 0;
+}
+
+
+
+.plan-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0077cc;
+  text-decoration: none;
+}
+a{
+    color: black !important;
+}
+

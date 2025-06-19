@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/landing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Allura&family=Archivo:ital,wght@0,100..900;1,100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+TZ+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Allura&family=Archivo:ital,wght@0,100..900;1,100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+TZ+Guides&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+
+  <style>
+    .username:hover{
+        opacity: 1;
+    }
+  </style>
+   
+  <body>
+    <%= console.log(planss) %>
+    <div class="islog" style="display: none">notnull</div>
+    <main>
+      <header>
+        <div class="navigator">
+          <div class="icon" onclick="showhome()"></div>
+        </div>
+        <span onclick="showabout()">About</span>
+        <span onclick="showplan()">Plan</span>
+        <span style="width: 400px;"></span>
+        <span onclick="showjoin()">My plans</span>
+        <% if (email) { %>
+        <span style="text-align: center;" class="username"><%= email %> <p onclick="logout()" style="font-size: 12px;">logout</p></span>
+        <% } else { %>
+        <span onclick="showlogin()">Login</p></span>
+        <% } %>
+      </header>
+      <span
+        class="material-icons-outlined"
+        onclick="location.reload()"
+        style="cursor: pointer; color: white; position: absolute; z-index: 100"
+        >refresh</span
+      >
+
+      <div class="content-landing">
+        <div class="inf-landing">
+          <p>
+            Too shy at the gym? Why not work out comfortably in your own home
+            with Finess, the web app designed to bring personalized fitness
+            plans right to your fingertips. Whether you’re a beginner or looking
+            to maintain your routine, Finess offers custom workout plans
+            tailored to your goals, schedule, and fitness level—all without the
+            need for expensive equipment or intimidating gym environments. Each
+            plan comes with clear video demonstrations and step-by-step
+            guidance, making it easy to follow along and stay motivated. Plus,
+            with progress tracking and flexible scheduling, you can exercise
+            whenever it suits you best. Perfect for those who prefer privacy,
+            have busy lifestyles, or simply want the convenience of working out
+            at home, Finess makes fitness accessible, simple, and effective—no
+            gym required.
+          </p>
+        </div>
+        <div class="vid-landing">
+          <iframe
+            width="450"
+            height="450"
+            src="https://www.youtube.com/embed/EKUNGQ4LmH8?si=9ALA2YHtTY0FBSCv"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <form id="submitlogin" style="display: none">
+        <div class="login">
+          <span class="log-logo"></span>
+          <label for="email-log">email</label>
+          <input type="email" id="email-log" name="email" />
+          <label for="password">password</label>
+          <input type="password" id="password-log" name="password" />
+          <button type="submit">submit</button>
+        </div>
+      </form>
+
+      <div id="submitsignup" style="display: none">
+         <div class="user-plans">
+
+  <% if (planss && planss.length > 0) { %>
+    <% planss.forEach(plan => { %>
+      <% if (plan.plan === 'Starter Plan' && plan.status === "approved") { %>
+        <div class="plan-card starter">
+          <h3>🟢 Starter Plan – ₱199/month</h3>
+          <p>Perfect for beginners or anyone looking to get moving with no pressure.</p>
+          <ul>
+            <li>✔ Access to basic home workout routines</li>
+            <li>✔ Weekly workout schedule</li>
+            <li>✔ Entry-level diet recommendations</li>
+            <li>✔ Progress tracking dashboard</li>
+          </ul>
+          <a href="https://www.youtube.com/watch?v=UBMk30rjy0o" target="_blank">▶ View Workout</a><br>
+          <a href="https://drive.google.com/fake-starter-guide" target="_blank">📄 Download Starter Guide</a>
+        </div>
+      <% } else if (plan.plan === 'Pro Plan' && plan.status === "approved") { %>
+        <div class="plan-card pro">
+          <h3>🔵 Pro Plan – ₱499/month</h3>
+          <p>Structured lifestyle approach for committed users.</p>
+          <ul>
+            <li>✔ Everything in Starter Plan</li>
+            <li>✔ Full library of intermediate to advanced workouts</li>
+            <li>✔ Personalized meal plans</li>
+            <li>✔ Downloadable guides</li>
+            <li>✔ Monthly fitness challenges</li>
+          </ul>
+          <a href="https://www.youtube.com/watch?v=X655B4ISakg" target="_blank">▶ View Pro Workout</a><br>
+          <a href="https://drive.google.com/fake-pro-kit" target="_blank">📄 Download Pro Kit</a>
+        </div>
+      <% } else if (plan.plan === 'Elite Plan' && plan.status === "approved") { %>
+        <div class="plan-card elite">
+          <h3>🔴 Elite Plan – ₱999/month</h3>
+          <p>Your custom, guided fitness experience.</p>
+          <ul>
+            <li>✔ Everything in Pro Plan</li>
+            <li>✔ One-on-one fitness coach access</li>
+            <li>✔ Weekly check-ins and adjustments</li>
+            <li>✔ Grocery list + custom diet plan</li>
+            <li>✔ Direct coach chat support</li>
+            <li>✔ Priority access to new features</li>
+          </ul>
+          <a href="https://www.youtube.com/watch?v=UItWltVZZmE" target="_blank">▶ View Elite Session</a><br>
+          <a href="https://drive.google.com/fake-elite-kit" target="_blank">📄 Download Elite Plan</a>
+        </div>
+      <% } %>
+    <% }) %>
+  <% } else { %>
+    <p>You have no active plans. Check out our pricing page to subscribe!</p>
+  <% } %>
+</div>
+
+
+      </div>
+
+      <div class="about" style="display: none">
+        <p>
+          Finess is your all-in-one destination for achieving your fitness goals
+          from the comfort of your home. Built for people who want effective,
+          personalized workouts without the pressure of a crowded gym, Finess
+          offers a wide range of guided exercise plans that cater to all fitness
+          levels—whether you're just starting out or looking to take your
+          routine to the next level. Our platform provides expert-designed
+          programs, video tutorials, and smart progress tracking to help you
+          stay consistent and motivated. With no need for fancy equipment or a
+          strict schedule, Finess empowers you to take control of your health,
+          your way. Fitness should be flexible, accessible, and tailored—and
+          that's exactly what Finess delivers.
+        </p>
+      </div>
+      <div class="plan-cont" style="display: none">
+        <div class="plan1">
+          <form id="plan1">
+            <input type="hidden" name="plan" value="plan1" />
+            <input type="hidden" name="price" value="₱ 399" />
+            <p class="p-name">Starter Plan</p>
+            <p class="p-feature">
+              <span class="pp-feature"
+                >✓ Access to basic home workout routines (no equipment
+                needed)</span
+              >
+              <span class="pp-feature">✓ Weekly workout schedule</span>
+              <span class="pp-feature">✓ Entry-level diet recommendations</span>
+              <span class="pp-feature">✓ Progress tracking dashboard</span>
+            </p>
+            <p class="p-price" data-price="399">₱ 399/month</p>
+            <button type="submit">Purchase</button>
+          </form>
+        </div>
+
+        <div class="plan2">
+          <form id="plan2">
+            <input type="hidden" name="plan" value="plan1" />
+            <input type="hidden" name="price" value="₱ 399" />
+            <p class="p-name">Pro Plan</p>
+            <p class="p-feature">
+              <span class="pp-feature"
+                >✓ Everything in Starter Plan, plus:</span
+              >
+              <span class="pp-feature"
+                >✓ Full library of intermediate to advanced workouts</span
+              >
+              <span class="pp-feature"
+                >✓ Personalized meal plans based on your fitness goals</span
+              >
+              <span class="pp-feature"
+                >✓ Downloadable workout and meal guides</span
+              >
+              <span class="pp-feature">✓ Monthly fitness challenges </span>
+            </p>
+            <p class="p-price" data-price="499">₱ 499/month</p>
+            <button type="submit">Purchase</button>
+          </form>
+        </div>
+
+        <div class="plan3">
+          <form id="plan3">
+            <input type="hidden" name="plan" value="plan1" />
+            <input type="hidden" name="price" value="₱ 399" />
+            <p class="p-name">Elite Plan</p>
+            <p class="p-feature">
+              <span class="pp-feature">✓ Everything in Pro Plan, plus:</span>
+              <span class="pp-feature"
+                >✓ One-on-one access to a certified online fitness coach</span
+              >
+              <span class="pp-feature"
+                >✓ Personalized weekly check-ins and adjustments</span
+              >
+              <span class="pp-feature"
+                >✓ Custom diet plan with grocery lists</span
+              >
+              <span class="pp-feature"
+                >✓ Direct chat support with your coach</span
+              >
+              <span class="pp-feature"
+                >✓ Priority access to new features and content</span
+              >
+            </p>
+            <p class="p-price" data-price="999">₱ 999/month</p>
+            <button type="submit">Purchase</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup-overlay" style="display: none">
+        <div class="popup-box">
+          <h3>Complete Your Purchase</h3>
+          <form id="popup-form">
+            <label for="popup-email">Email:</label>
+            <input type="email" id="popup-email" name="email" required />
+
+            <label for="popup-payment">Mode of Payment:</label>
+            <select id="popup-payment" name="payment" required>
+              <option value=""></option>
+              <option value="gcash">GCash</option>
+              <option value="maya">Maya</option>
+              <option value="bank">Bank Transfer</option>
+            </select>
+
+            <label for="popup-receipt">Transaction ID:</label>
+            <input
+              type="number"
+              id="popup-receipt"
+              name="Transaction"
+              class="Transaction"
+              required
+            />
+
+            <input type="hidden" id="selected-plan" name="plan" />
+            <input type="hidden" id="selected-price" name="price" />
+
+            <div class="popup-buttons">
+              <button type="submit">Submit</button>
+              <button type="button" id="cancel-popup">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="custom-alert" class="custom-alert hidden">
+        <div class="alert-box">
+          <p id="alert-message"></p>
+          <button id="alert-close-btn">OK</button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+
+      function logout(){
+        window.location.href = "/"
+      }
+      const customAlert = document.getElementById("custom-alert");
+      const alertMessage = document.getElementById("alert-message");
+      const alertCloseBtn = document.getElementById("alert-close-btn");
+
+      function showAlert(message) {
+        alertMessage.textContent = message;
+        customAlert.classList.remove("hidden");
+      }
+
+      alertCloseBtn.addEventListener("click", () => {
+        customAlert.classList.add("hidden");
+      });
+
+      let home = document.querySelector(".content-landing");
+      let about = document.querySelector(".about");
+      let login = document.querySelector("#submitlogin");
+      let signup = document.querySelector("#submitsignup");
+      let plans = document.querySelector(".plan-cont");
+
+      let sections = [home, about, login, signup, plans];
+
+      function showSection(sectionToShow) {
+        sections.forEach((section) => {
+          section.style.display = section === sectionToShow ? "flex" : "none";
+        });
+      }
+
+      function showhome() {
+        showSection(home);
+      }
+
+      function showabout() {
+        showSection(about);
+      }
+
+      function showjoin() {
+        showSection(signup);
+      }
+
+      function showlogin() {
+        showSection(login);
+      }
+
+      function showplan() {
+        showSection(plans);
+      }
+
+      let isLoggedIn = document.querySelector(".islog").textContent;
+
+      document.querySelectorAll(".plan-cont form").forEach((form) => {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (!isLoggedIn) {
+            showlogin();
+            return;
+          }
+
+          const plan = form.querySelector(".p-name").textContent;
+          const price = form.querySelector(".p-price").dataset.price;
+
+          document.getElementById("selected-plan").value = plan;
+          document.getElementById("selected-price").value = price;
+
+          document.querySelector(".popup-overlay").style.display = "flex";
+        });
+      });
+
+      document
+        .getElementById("cancel-popup")
+        .addEventListener("click", function () {
+          document.querySelector(".popup-overlay").style.display = "none";
+        });
+
+      document
+        .getElementById("popup-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("popup-email").value;
+          const payment = document.getElementById("popup-payment").value;
+          const plan = document.getElementById("selected-plan").value;
+          const price = document.getElementById("selected-price").value;
+          const transac =
+            document.getElementsByClassName("Transaction")[0].value;
+
+          fetch("/purchase", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, payment, plan, price, transac }),
+          })
+            .then((res) => res.json())
+            .then((response) => {
+              showAlert(response.message);
+              document.querySelector(".popup-overlay").style.display = "none";
+              e.target.reset();
+            })
+            .catch((err) => {
+              console.error(err);
+            });
+        });
+
+      let addsched = document.querySelector("#submitsignup");
+
+      addsched.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let pass = addsched.querySelector("#password-log").value;
+        let cpass = document.querySelector(".cpass").value;
+        console.log(pass + "password");
+        console.log(cpass + "pppassword");
+        if (cpass !== pass) {
+          showAlert("password does not match");
+        } else {
+          let Newform = new FormData(addsched);
+          let data = Object.fromEntries(Newform);
+
+          fetch("/signup", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          })
+            .then((res) => res.json())
+            .then((dat) => {
+              if (dat.success) {
+                showAlert(dat.message);
+              } else {
+                showAlert(dat.message);
+              }
+            });
+        }
+      });
+
+      let loggin = document.querySelector("#submitlogin");
+
+      loggin.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let Newform = new FormData(loggin);
+        let data = Object.fromEntries(Newform);
+
+        fetch("/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((dat) => {
+            if (dat.success) {
+              showAlert(dat.message);
+            } else {
+              showAlert(dat.message);
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
