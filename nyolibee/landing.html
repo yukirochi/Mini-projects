@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nyalibee</title>
+    <link rel="stylesheet" href="landing.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/jellee" rel="stylesheet">
+    <link rel="icon" type="image/png"  href="logo/logo.png">
+</head>
+<body>
+    <header class="main-header"><div class="name-logo"><div class="logo-container"></div><span>nyalimee</span></div>
+       <span id="shopping-cart"> <span  class="material-icons" onclick="openCart()">shopping_bag</span><span class="material-icons">person</span></span>
+    </header>
+<div class="content">  
+    <div class="store-picture"> 
+       <div class="store-rad-container">
+        <input type="radio" name="storepicrad" class="store-rad" checked onclick="spic1('storepic/1.png')">
+        <input type="radio" name="storepicrad" class="store-rad" onclick="spic1('storepic/2.png')">
+        <input type="radio" name="storepicrad" class="store-rad" onclick="spic1('storepic/3.png')">
+        <input type="radio" name="storepicrad" class="store-rad" onclick="spic1('storepic/4.png')">
+       </div>
+    </div>
+    <div class="product-main-div">
+        <div class="main-main-div">
+            <header class="content-header"> 
+                <span class="material-icons">restaurant</span>
+             
+                <span>Main Course</span>
+            </header>
+            <div id="contents" class="content-main">
+                
+            </div> 
+        </div>
+
+        <div class="side-main-div">
+            <header class="content-header"> 
+                <span class="material-icons">fastfood</span> 
+                <span>Side's</span>
+            </header>
+            <div id="contents" class="content-side">
+                
+               </div> 
+                 
+        </div>
+
+        <div class="drinks-main-div">
+            <header class="content-header"> 
+                <span class="material-icons">local_cafe</span> 
+                <span>Beverages</span>
+            </header>
+            <div id="contents" class="content-drink">
+                        
+               </div> 
+
+
+        </div>
+    </div>
+</div>
+   <div class="shelf-pop">
+    <div class="orders">
+        <div class="orders-content-div">
+
+           
+
+        </div>
+    </div>
+    <div class="total-div">
+      <p>TOTAL     ₱<span class="totalprice">50</span></p>
+    </div>
+    <button class="confirm">Check out</button>
+   </div>
+
+
+
+    <script src="landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+[
+    {
+        "name": "1pc. Nyickenyoy",
+        "price": 105.65,
+        "info":"Philippines' best-tasting crispylicious, juicylicious Chickenjoy",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/d77e2ed5-f92b-4bc3-8e94-52bf8020d150.png"
+
+    },
+    {
+        "name": "2pc. Nyickenyoy",
+        "price": 196.00,
+        "info":"Philippines' best-tasting crispylicious, juicylicious Chickenjoy",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/d4afad81-bad8-4737-8dcc-59915b3a8839.png"
+
+    },
+    {
+        "name": "1pc. Nyicken/ NgokeFloat",
+        "price": 134.00,
+        "info":"Philippines' best-tasting crispylicious, juicylicious Chickenjoy",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/2daa1094-6d1d-4174-af2e-dfd6d900c9f6.png"
+
+    },
+    {
+        "name": "6pc. Nyicken nyolo",
+        "price": 467.00,
+        "info":"A bucket of your favorite crispylicious, juicylicious Chickenjoy!",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/6cb3c945-2dda-486f-b33c-1ff716c0efcc.png"
+
+    },
+    {
+        "name": "4pc. Nyickenyo",
+        "price": 338.00,
+        "info":"Four-piece Family Box of the Philippines' best-tasting crispylicious",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/c397aafe-bbee-43be-875a-1a56dd3b7234.png"
+
+    },
+    {
+        "name": "Aloha Champ",
+        "price": 257.00,
+        "info":"The iconic 1/3-pound Champ patty with juicy pineapple rings, crispy bacon",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/59b56112-8d5a-4591-ab29-9ddb522f127b.png"
+
+    }
+    
+]

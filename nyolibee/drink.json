@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Iced Mocha",
+        "price": 69.00,
+        "info":"Iced coffee, freshly brewed made from 100% Arabica beans",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/7640d242-3935-4679-9cad-046d68eb5daa.png"
+    },
+    {
+        "name": "Iced Mocha Float",
+        "price": 80.00,
+        "info":"Iced coffee, freshly brewed made from 100% Arabica beans",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/f24d984b-98a0-4c7c-b4bb-9cc242ea2638.png"
+    },
+    {
+        "name": "Hot Fresh Mrew",
+        "price": 53.00,
+        "info":"Hot, freshly brewed coffee",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/ffa1151c-3961-4048-b109-53a3d348ecd3.png"
+    },
+    {
+        "name": "Iced Latte",
+        "price": 59.00,
+        "info":"Iced Blend of Coffee, Fresh Milk, and Sweet Syrup",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/63511850-9ff7-46eb-8d7f-ecc75be8c00d.png"
+    }
+]

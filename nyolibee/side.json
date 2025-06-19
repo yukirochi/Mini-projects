@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Nyeesy Nglassic Hotdog",
+        "price": 80.00,
+        "info":"Meaty sausage in a soft hotdog bun, topped with a generous serving",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/91793f62-b94b-46f1-96f9-47c153825435.png"
+    },
+    {
+        "name": "Nuna Pie Nyolo",
+        "price": 53.00,
+        "info":"Crispy & creamy, two-na sarap!",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/829a3334-021b-410e-ad64-ebc7f7676344.png"
+    },
+    {
+        "name": "Nuna Pie Nrio",
+        "price": 156.00,
+        "info":"Crispy & creamy, two-na sarap!",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/d421f8ce-119e-40cd-b788-b8bd60ad4a3c.png"
+    },
+    {
+        "name": "Nngokies & Gream Sundae",
+        "price": 59.00,
+        "info":"Creamy vanilla soft serve topped with crushed Oreo cookies",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/29aba8cd-91ff-4d51-875d-c1944f967654.png"
+    },
+    {
+        "name": "Mini Nyocolate Sundae",
+        "price": 27.00,
+        "info":"Creamy vanilla soft serve topped with rich, indulgent chocolate syrup",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/54f40dc8-a12a-49c2-98fd-88b161528675.png"
+    },
+    {
+        "name": "Crunye Nyicken Sandwich",
+        "price": 62.00,
+        "info":"Crunchy. Tasty. Sarap in every bite!",
+        "img":"https://cdn-menu-us-east-1.tillster.com/jb-ph/d4ac4efa-f81f-49ee-ab51-4d4a070b42b6.png"
+    }
+]
