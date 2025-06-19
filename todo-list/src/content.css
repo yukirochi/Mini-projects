@@ -1,0 +1,50 @@
+.cont{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.text-cont{
+    width: 80%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h4{
+
+    width: 100%;
+    background-color: black;
+    height: 50px;
+    margin-top: 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.status{
+    margin-top: 50px;
+}
+.button-cont{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-cont > button{
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    border: 1px solid black;
+}
+
+
